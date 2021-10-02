@@ -4,15 +4,15 @@ import { getStoredCart } from "../../utilities/fakedb";
 const useCart = (products) => {
   const [cart, setCart] = useState([]);
   useEffect(() => {
-    if (products?.length) {
+    if (products) {
       const saveValue = getStoredCart();
       let allDatasend = [];
       for (const key in saveValue) {
         const allFilterProduct = products.find(
           (product) => product.key === key
         );
-        const quntity = saveValue[key];
-        allFilterProduct.quntity = quntity;
+        const quantity = saveValue[key];
+        allFilterProduct.quantity = quantity;
         allDatasend.push(allFilterProduct);
       }
       setCart(allDatasend);

@@ -1,10 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Rating from "react-rating";
-import Cart from "../Cart/Cart";
 
 const ReviewProduct = (props) => {
-  console.log(props.productreview);
   const { name, seller, price, stock, star, key } = props.productreview;
   return (
     <div className="product">

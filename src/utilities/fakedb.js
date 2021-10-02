@@ -1,4 +1,19 @@
-// use local storage as your db for now
+/* use local storage as your db for now
+const addToDb = (id) => {
+  const exists = getStoredCart();
+  if (!exists) {
+    exists[id] = 1;
+  } else {
+    if (exists[id]) {
+      const newCount = exists[id] + 1;
+      exists[id] = newCount;
+    } else {
+      exists[id] = 1;
+    }
+  }
+  updateDb(exists);
+}; */
+
 const addToDb = (id) => {
   const exists = getDb();
   let shopping_cart = {};

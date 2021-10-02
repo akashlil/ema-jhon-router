@@ -4,6 +4,7 @@ import Shop from "./components/Shop/Shop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import OrderReview from "./components/OrderReview/OrderReview";
 import Inventory from "./components/Inventrarry/Inventory";
+import Success from "./components/OrderSuccess/Success";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/inventory">
             <Inventory></Inventory>
+          </Route>
+          <Route path="/successfull">
+            <Success></Success>
           </Route>
         </Switch>
       </Router>
