@@ -13,29 +13,33 @@ const Success = () => {
 
   const { user } = useAuth();
   return (
-    <div className="contener">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {/* register your input into the hook by invoking the "register" function */}
-        <input
-          className="input-filed"
-          defaultValue={user.email}
-          {...register("email", { required: true })}
-        />
-        {errors.email && <p className="p-tag">This field is required</p>}
-        <br />
-        {/* include validation with required or other standard HTML validation rules */}
-        <input
-          className="input-filed"
-          {...register("exampleRequired", { required: true })}
-        />
-        {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && (
-          <p className="p-tag">This field is required</p>
-        )}
-        <br />
-        <input className="btn-login" type="submit" />
-      </form>
-    </div>
+    <>
+      <h1 className="text-center">shapping</h1>
+      <div className="contener">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          {/* register your input into the hook by invoking the "register" function */}
+          <input
+            className="input-filed"
+            defaultValue={user.displayName}
+            {...register("email", { required: true })}
+          />
+          {errors.email && <p className="p-tag">This field is required</p>}
+          <br />
+          {/* include validation with required or other standard HTML validation rules */}
+          <input
+            className="input-filed"
+            defaultValue={user.email}
+            {...register("exampleRequired", { required: true })}
+          />
+          {/* errors will return when field validation fails  */}
+          {errors.exampleRequired && (
+            <p className="p-tag">This field is required</p>
+          )}
+          <br />
+          <input className="btn-login" type="submit" />
+        </form>
+      </div>
+    </>
   );
 };
 

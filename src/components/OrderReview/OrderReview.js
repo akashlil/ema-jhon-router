@@ -1,5 +1,6 @@
+import { SDK_VERSION } from "@firebase/app";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Rating from "react-rating";
 import { useHistory } from "react-router";
 import useAuth from "../../Context/useAuth";

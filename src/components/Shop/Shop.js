@@ -55,12 +55,12 @@ const Shop = () => {
     addToDb(product.key);
   };
 
-  /*   const handleAddToCart = (clickOneproduct) => {
-    const newCart = [...cart, clickOneproduct];
-    setCart(newCart);
-    // save to local storage (for now)
-    addToDb(clickOneproduct.key);
-  }; */
+  //   const handleAddToCart = (clickOneproduct) => {
+  //   const newCart = [...cart, clickOneproduct];
+  //   setCart(newCart);
+  //   // save to local storage (for now)
+  //   addToDb(clickOneproduct.key);
+  // };
 
   const handleSearch = (event) => {
     const searchText = event.target.value;
