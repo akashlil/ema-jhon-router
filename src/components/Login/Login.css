@@ -1,0 +1,35 @@
+.contener {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.input-filed {
+  width: 300px;
+  line-height: 20px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid rgb(233, 192, 118);
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+}
+
+.btn-login {
+  padding: 10px 25px;
+  border: none;
+  background-color: rgb(233, 192, 118);
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  color: white;
+  background-color: rgb(133, 133, 16);
+}
+
+.error-text {
+  color: red;
+}

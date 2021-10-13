@@ -1,20 +1,35 @@
-.header{
-    text-align: center;
+.header {
+  text-align: center;
 }
-.logo{
-    height: 50px;
+.logo {
+  height: 50px;
 }
 .header nav {
-    background-color: black;
-    line-height: 40px;
+  background-color: black;
+  line-height: 40px;
 }
-.header nav a{
-    text-decoration: none;
-    color: white;
-    margin-right: 20px;
-    padding: 5px;
-    font-size: 20px;
+.header nav a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  padding: 5px;
+  font-size: 20px;
 }
-.header nav a:hover{
-    background-color: lightgray;
+.header nav a:hover {
+  background-color: lightgray;
+}
+
+.log-out-btn {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 8px 5px;
+  line-height: 20px;
+}
+.log-out-btn:hover {
+  background-color: lightgray;
+}
+.email-show-header {
+  color: rgb(223, 238, 17);
 }

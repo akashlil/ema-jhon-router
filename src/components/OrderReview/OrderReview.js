@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 import Rating from "react-rating";
 import { useHistory } from "react-router";
+import useAuth from "../../Context/useAuth";
 import { clearTheCart, removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import useCart from "../Hock/useCart";
@@ -11,9 +12,9 @@ import ReviewProduct from "../ReviewProduct/ReviewProduct";
 const OrderReview = () => {
   const [products, setProduct] = useProduct();
   const [cart, setCart] = useCart(products);
-
+  const { user } = useAuth();
   const history = useHistory();
-  console.log(cart);
+
   const removeItemLocSt = (key) => {
     const deleteProduct = cart.filter((cartproduct) => cartproduct.key !== key);
     removeFromDb(key);
@@ -21,12 +22,14 @@ const OrderReview = () => {
   };
 
   const placeOrder = () => {
-    // fackbd
-    clearTheCart();
-
-    setCart([]);
+    // something problem
+    // if (user.email) {
+    // clearTheCart();
+    // setCart([]);
+    // }
     history.push("/successfull");
   };
+
   return (
     <div className="shop-container">
       <div>
